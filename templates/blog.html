@@ -4,9 +4,16 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
-<ul>
+<ul class="post-list">
   {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  <li class="post-item">
+      <div class="marker"></div>
+      <div>
+          <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+          <p class="post-meta">date: {{ page.date }}</p>
+          <p class="post-desc">{{ page.description }}</p>
+      </div>
+  </li>
   {% endfor %}
 </ul>
 {% endblock content %}

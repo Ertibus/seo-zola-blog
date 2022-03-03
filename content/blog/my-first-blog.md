@@ -1,6 +1,7 @@
 +++
 title = "My First Blog"
 date = 2022-03-02
+description = "This is my first blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat vel lacus consequat laoreet. In in efficitur elit. Duis a rhoncus nunc. Integer non interdum massa. Sed egestas orci id eros tristique sodales. Suspendisse potenti. Mauris vitae ex a nibh tincidunt sollicitudin. Cras consectetur congue eros quis porta. Sed gravida ligula eu lectus elementum aliquam. Mauris at nisi sed dolor placerat congue. Maecenas eget quam blandit, luctus nisi nec, suscipit justo."
 +++
 
 This is my first blog post

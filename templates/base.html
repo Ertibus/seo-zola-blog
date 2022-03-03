@@ -11,11 +11,22 @@
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock %}
-    </div>
-  </section>
+  
+  <header class="headerbar-container">
+    <nav class="headerbar container">
+      <a href="/blog" class="header-logo">Devclectic</a>
+      <div class="mp-r"> </div>
+      <a href="/blog" class="header-item">Blog</a>
+      <a href="/blog" class="header-item">About</a>
+      <a href="/blog" class="header-item">Contacts</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    {% block content %} {% endblock %}
+  </div>
+
+  <div class="to-bottom"></div>
 </body>
 
 </html>
