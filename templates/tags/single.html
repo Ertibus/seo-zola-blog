@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "macros/page_item.html" as page_item %}
+{% import "macros/head.html" as head %}
+
+{% block head %}
+{{ head::head(title=term.name, desc="Content of Ertibus blog. List every tag used in this blog. From languages to subjets. Choose what you are looking!") }}
+{% endblock head %}
+
+{% block content %}
+<div class="posts">
+	<h1 class="title">
+		Tag: {{ term.name }}
+	</h1>
+	<ul class="post-list">
+		{% for page in paginator.pages %}
+		<li class="post-item">
+			{{ page_item::page_in_list(page=page) }}
+		</li>
+		{% endfor %}
+	</ul>
+	<footer class="page-footer">
+		<nav class="pagination">
+			{% if paginator.previous %}
+				<a class="prev" href="{{ paginator.previous }}">← Previous</a>
+			{% endif %}
+			{% if paginator.next %}
+				<a class="next" href="{{ paginator.next }}">Next →</a>
+			{% endif %}
+		</nav>
+	</footer>
+</div>
+{% endblock content %}

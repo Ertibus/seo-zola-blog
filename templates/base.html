@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		{% block head %} {% endblock %}
+	</head>
+	<body>
+		<header class="headerbar-container">
+			<nav class="headerbar container">
+				<a href="/blog" class="header-logo">Ertibus Blog</a>
+				<div class="mp-r"> </div>
+				<a href="/blog" class="header-item">Blog</a>
+				<a href="/tags" class="header-item">Tags</a>
+				<a href="/about" class="header-item">About</a>
+				<a href="/blog" class="header-item">Contacts</a>
+			</nav>
+		</header>
 
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Devclectic</title>
-  
-  <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) }}">
-</head>
+		<div class="container">
+			{% block content %} {% endblock %}
+		</div>
 
-<body>
-  
-  <header class="headerbar-container">
-    <nav class="headerbar container">
-      <a href="/blog" class="header-logo">Devclectic</a>
-      <div class="mp-r"> </div>
-      <a href="/blog" class="header-item">Blog</a>
-      <a href="/blog" class="header-item">About</a>
-      <a href="/blog" class="header-item">Contacts</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    {% block content %} {% endblock %}
-  </div>
-
-  <div class="to-bottom"></div>
-</body>
+		<div class="to-bottom"></div>
+	</body>
 
 </html>

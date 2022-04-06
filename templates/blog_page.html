@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% import "macros/head.html" as head %}
+
+{% block head %}
+	{{ head::head(title=page.title,desc=page.description) }}
+{% endblock head %}
 
 {% block content %}
 

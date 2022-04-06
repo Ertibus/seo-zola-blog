@@ -1,0 +1,8 @@
+{% macro page_in_list(page) %}
+<div class="marker"></div>
+<div>
+	<h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
+	<p class="post-meta">{{ page.date }}</p>
+	<p class="post-desc">{{ page.description }}</p>
+</div>
+{% endmacro page_in_list %}

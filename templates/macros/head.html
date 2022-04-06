@@ -1,0 +1,12 @@
+{% macro head(title, desc) %}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- SEO -->
+	<title>{{ title }}</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="{{ desc }}">
+	<meta name="author" content="Emilis Margevicius">
+	<!-- -->
+	<link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) }}">
+{% endmacro head %}

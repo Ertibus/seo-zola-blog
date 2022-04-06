@@ -1,19 +1,20 @@
 {% extends "base.html" %}
+{% import "macros/page_item.html" as page_item %}
+{% import "macros/head.html" as head %}
+
+{% block head %}
+	{{ head::head(title=section.title,desc=section.description) }}
+{% endblock head %}
 
 {% block content %}
 <h1 class="title">
-  {{ section.title }}
+	Posts
 </h1>
 <ul class="post-list">
-  {% for page in section.pages %}
-  <li class="post-item">
-      <div class="marker"></div>
-      <div>
-          <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
-          <p class="post-meta">date: {{ page.date }}</p>
-          <p class="post-desc">{{ page.description }}</p>
-      </div>
-  </li>
-  {% endfor %}
+	{% for page in section.pages %}
+	<li class="post-item">
+		{{ page_item::page_in_list(page=page) }}
+	</li>
+	{% endfor %}
 </ul>
 {% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "macros/head.html" as head %}
+
+{% block head %}
+	{{ head::head(title="Tags | Ertibus blog",desc="Content of Ertibus blog. List every tag used in this blog. From languages to subjets. Choose what you are looking!") }}
+{% endblock head %}
+
+{% block content %}
+<h1>Tags</h1>
+{% if terms %}
+<ul class="tag-list">
+	{% for term in terms | reverse %}
+		<li class="tag-item"><a href="{{ term.permalink | safe }}">{{ term.name }} ({{ term.pages | length }})</a></li>
+	{% endfor %}
+</ul>
+{% endif %}
+{% endblock content %}
