@@ -1,12 +1,11 @@
+{% import "macros/head.html" as head %}
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Ertibus Gitlab Pages</title>
+{% block head %}
+	{{ head::head(title="Ertibus Gitlab Pages",desc="Blogs, Portfolio and more!") }}
   <meta http-equiv="refresh" content="0; url=/blog/">
-</head>
-
+{% endblock head %}
 <body>
     <h1>Loading...</h1>
     <p><a href="/blog/">Click me if the redirect fails</a></p>
