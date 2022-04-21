@@ -1,5 +1,5 @@
 +++
-title = "Searching file contents for pattern"
+title = "Searching file contents for a pattern"
 date = 2022-04-21
 description = "Creating a Python script to search a directory trees files for content"
 in_search_index = true
