@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import "macros/page_item.html" as page_item %}
+{% import "macros/head.html" as head %}
+
+{% block head %}
+	{{ head::head(title=page.title,desc=page.description) }}
+{% endblock head %}
+
+{% block content %}
+{{ page.content | safe }}
+{% endblock content %}

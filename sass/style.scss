@@ -180,6 +180,13 @@ pre {
 	text-shadow: 0 0 3px $hyperlink-color;
 }
 
+.gallery-page {
+	a {
+		text-decoration: none !important;
+		text-transform: uppercase;
+	}
+}
+
 title {
 	text-transform: capitalize;
 }
