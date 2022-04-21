@@ -52,9 +52,7 @@ With all of the preperations done, let's create the final function, with takes i
 def read_file(file, term):
     if not readable(file):
         return
-
-		with open(file, 'r') as f:
-				for i, line in enumerate(f.readlines()):
-						if re.search(term, line):
-								print(f"Found in '{file}'\n{i}: {line}")
+    with open(file, 'r') as f:
+        for i, line in enumerate(f.readlines()):
+            if re.search(term, line): print(f"Found in '{file}'\n{i}: {line}")
 ```
