@@ -2,7 +2,6 @@
 title = "Markdown conversion"
 date = 2022-02-09
 description = "Post that tests the result and style of the converted markdown file. It's a draft, as so it won't apear in the final result"
-draft = true
 +++
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
